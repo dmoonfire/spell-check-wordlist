@@ -1,0 +1,68 @@
+{
+  "name": "spell-check-wordlist",
+  "main": "./src/index",
+  "version": "0.0.0",
+  "description": "A plugin for `spell-check` which handles arbitrary wordlist files.",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dmoonfire/spell-check-wordlist"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "atom-package-deps": "^4.6.2",
+    "atom-pathspec": "0.0.0",
+    "atom-ts-transpiler": "^1.5.2",
+    "lodash": "^4.17.5",
+    "spelling-manager": "^1.1.0",
+    "typescript": "^2.8.3"
+  },
+  "devDependencies": {
+    "@types/atom": "^1.26.0",
+    "@types/node": "^9.6.6"
+  },
+  "scripts": {
+    "test": "atom --test spec"
+  },
+  "atomTranspilers": [
+    {
+      "transpiler": "atom-ts-transpiler",
+      "glob": "{!(node_modules)/**/,}*.ts?(x)",
+      "options": {
+        "compilerOptions": {},
+        "cacheKeyFiles": [],
+        "verbose": true
+      }
+    }
+  ],
+  "providedServices": {
+    "spell-check": {
+      "versions": {
+        "1.0.0": "provideSpellCheck"
+      }
+    }
+  },
+  "configSchema": {
+    "checkPaths": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "description": "List of file paths paths for wordlists. Pseudo-drives such as `home:` or `application:` can be used for relative paths.",
+      "order": 1
+    },
+    "addPaths": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "description": "List of file paths paths for wordlists which can have words added to them. Each one will be listed in the 'Add word to...' selection in suggestions.",
+      "order": 2
+    }
+  }
+}
