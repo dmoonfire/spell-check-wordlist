@@ -16,13 +16,13 @@
     "atom-package-deps": "^4.6.2",
     "atom-pathspec": "0.0.0",
     "atom-ts-transpiler": "^1.5.2",
-    "lodash": "^4.17.5",
-    "spelling-manager": "^1.1.0",
-    "typescript": "^2.8.3"
+    "lodash": "^4.17.15",
+    "spelling-manager": "^1.2.3",
+    "typescript": "^2.9.2"
   },
   "devDependencies": {
-    "@types/atom": "^1.26.0",
-    "@types/node": "^9.6.6"
+    "@types/atom": "^1.36.1",
+    "@types/node": "^9.6.51"
   },
   "scripts": {
     "test": "atom --test spec"
