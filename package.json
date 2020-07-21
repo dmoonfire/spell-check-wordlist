@@ -16,7 +16,7 @@
     "atom-package-deps": "^4.6.2",
     "atom-pathspec": "0.0.0",
     "atom-ts-transpiler": "^1.5.2",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "spelling-manager": "^1.2.3",
     "typescript": "^2.9.2"
   },
